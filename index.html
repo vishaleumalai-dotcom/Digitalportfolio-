@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Digital portfolio </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Digital Portfolio</title>
+
+  <style>
+
+    body {
+
+      font-family: "Poppins", sans-serif;
+
+      margin: 0;
+
+      padding: 0;
+
+      line-height: 1.6;
+
+      background: #f4f6f9;
+
+      color: #222;
+
+      transition: background 0.3s, color 0.3s;
+
+    }
+
+    /* Header */
+
+    header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 20px;
+
+      padding: 2rem;
+
+      background: linear-gradient(135deg, #4a00e0, #8e2de2);
+
+      color: #fff;
+
+      flex-wrap: wrap;
+
+      position: relative;
+
+      text-align: center;
+
+    }
+
+    header img {
+
+      width: 120px;
+
+      height: 120px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      border: 4px solid #fff;
+
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+
+    }
+
+    .header-text {
+
+      max-width: 600px;
+
+    }
+
+    header h1 {
+
+      margin: 0;
+
+      font-size: 2.4rem;
+
+    }
+
+    header p {
+
+      margin: 0.5rem 0 0;
+
+      font-size: 1.1rem;
+
+      opacity: 0.9;
+
+    }
+
+    /* Navbar */
+
+    nav {
+
+      text-align: center;
+
+      background: #222;
+
+      padding: 0.8rem;
+
+    }
+
+    nav a {
+
+      margin: 0 15px;
+
+      text-decoration: none;
+
+      color: #fff;
+
+      font-weight: 600;
+
+      transition: color 0.3s;
+
+    }
+
+    nav a:hover {
+
+      color: #ffcc00;
+
+    }
+
+    /* Section */
+
+    section {
+
+      padding: 2rem;
+
+      max-width: 1000px;
+
+      margin: auto;
+
+    }
+
+    .card {
+
+      background: #fff;
+
+      border-radius: 12px;
+
+      padding: 1.5rem;
+
+      margin-bottom: 1.5rem;
+
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    }
+
+    h2 {
+
+      margin-top: 0;
+
+      color: #4a00e0;
+
+      border-bottom: 2px solid #8e2de2;
+
+      display: inline-block;
+
+      padding-bottom: 5px;
+
+    }
+
+    ul {
+
+      margin: 0;
+
+      padding-left: 1.2rem;
+
+    }
+
+    footer {
+
+      text-align: center;
+
+      padding: 1rem;
+
+      background: #222;
+
+      color: #fff;
+
+      font-size: 0.9rem;
+
+    }
+
+    /* Resume Button */
+
+    .resume-btn {
+
+      display: inline-block;
+
+      margin-top: 15px;
+
+      padding: 12px 24px;
+
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+
+      color: #fff;
+
+      border-radius: 30px;
+
+      text-decoration: none;
+
+      font-weight: bold;
+
+      transition: 0.3s;
+
+    }
+
+    .resume-btn:hover {
+
+      background: linear-gradient(135deg, #dd2476, #ff512f);
+
+      transform: scale(1.05);
+
+    }
+
+    /* Dark Mode */
+
+    body.dark {
+
+      background: #121212;
+
+      color: #ddd;
+
+    }
+
+    body.dark header {
+
+      background: linear-gradient(135deg, #141e30, #243b55);
+
+    }
+
+    body.dark nav, body.dark footer {
+
+      background: #000;
+
+    }
+
+    body.dark .card {
+
+      background: #1e1e1e;
+
+      color: #ddd;
+
+    }
+
+    /* Dark Mode Toggle Switch (top-right) */
+
+    .toggle-container {
+
+      position: absolute;
+
+      top: 20px;
+
+      right: 20px;
+
+    }
+
+    .toggle-switch {
+
+      position: relative;
+
+      width: 50px;
+
+      height: 26px;
+
+      background: #ddd;
+
+      border-radius: 20px;
+
+      cursor: pointer;
+
+      transition: background 0.3s;
+
+    }
+
+    .toggle-switch::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 20px;
+
+      height: 20px;
+
+      left: 3px;
+
+      top: 3px;
+
+      background: #fff;
+
+      border-radius: 50%;
+
+      transition: transform 0.3s;
+
+    }
+
+    .toggle-switch.active {
+
+      background: #ff512f;
+
+    }
+
+    .toggle-switch.active::before {
+
+      transform: translateX(24px);
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <img src="https://www.dropbox.com/scl/fi/yqviu8hv34aw1syjv0n6v/IMG-20250912-WA0000.jpg?rlkey=waqlu96yzlz2gq7x6eusrj6kh&st=w0vjj16e&dl=1" alt="Profile Photo">
+
+    <div class="headr-text">
+
+      <h1>vishal</h1>
+
+      <p>Web Developer | Designer | Programmer</p>
+
+    </div>
+
+    <!-- Dark Mode Toggle -->
+
+    <div class="toggle-container">
+
+      <div class="toggle-switch" id="darkToggle"></div>
+
+    </div>
+
+  </header>
+
+  <nav>
+
+    <a href="#about">About</a>
+
+    <a href="#education">Education</a>
+
+    <a href="#certificates">Certificates</a>
+
+    <a href="#projects">Projects</a>
+
+    <a href="#skills">Skills</a>
+
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+  <section id="about" class="card">
+
+    <h2>About Me</h2>
+
+    <p>Hello! I'm passionate about web development and design. I enjoy creating clean, modern, and user-friendly websites.</p>
+
+  </section>
+
+  <section id="education" class="card">
+
+    <h2>Education</h2>
+
+    <ul>
+
+      <li><strong>Bachelor of Computer Science</strong> – XYZ University (2020 - 2024)</li>
+
+      <li><strong>Higher Secondary</strong> – ABC School (2018 - 2020)</li>
+
+      <li><strong>Secondary</strong> – ABC School (2016 - 2018)</li>
+
+    </ul>
+
+  </section>
+
+  <section id="certificates" class="card">
+
+    <h2>Certificates</h2>
+
+    <ul>
+
+      <li>Full-Stack Web Development – Coursera</li>
+
+      <li>Java Programming – Udemy</li>
+
+      <li>Python for Data Science – IBM</li>
+
+    </ul>
+
+  </section>
+
+  <section id="projects" class="card">
+
+    <h2>Projects</h2>
+
+    <ul>
+
+      <li>Portfolio Website</li>
+
+      <li>Blog Design</li>
+
+      <li>E-commerce Store</li>
+
+    </ul>
+
+  </section>
+
+  <section id="skills" class="card">
+
+    <h2>Skills</h2>
+
+    <p>HTML, CSS, JavaScript, React, Python, Java</p>
+
+  </section>
+
+  <section id="contact" class="card">
+
+    <h2>Contact</h2>
+
+    <p>Email: yourname@email.com</p>
+
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+
+    <p>GitHub: github.com/yourusername</p>
+
+    <!-- Resume at the end -->
+
+    <a href="https://www.dropbox.com/scl/fi/pboyplqsdei2ay3w7px0p/CV_2025091210183266.pdf?rlkey=g6ihhqa04bx06w7zmk28z94jx&st=77pv71dy&dl=1" class="resume-btn" download>📄 Download Resume</a>
+
+  </section>
+
+  <footer>
+
+    <p>&copy; 2025 Yourname | All Rights Reserved</p>
+
+  </footer>
+
+  <script>
+
+    const toggleSwitch = document.getElementById("darkToggle");
+
+    toggleSwitch.addEventListener("click", () => {
+
+      document.body.classList.toggle("dark");
+
+      toggleSwitch.classList.toggle("active");
+
+    });
+
+  </script>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
